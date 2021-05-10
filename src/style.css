@@ -1,6 +1,9 @@
 body {
     color: blue;
 };
+ul {
+    list-style: none;
+};
 .weather-app {
     border: 3px;
     border-radius: 10px;
