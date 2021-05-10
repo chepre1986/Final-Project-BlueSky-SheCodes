@@ -21,7 +21,7 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
   }
 function displayTemp(response){
-  console.log(response);
+
 let temperatureElement = document.querySelector("#temp");
 let cityElement = document.querySelector("#city");
 let descriptionElement = document.querySelector("#description");
@@ -42,7 +42,6 @@ let iconElement = document.querySelector("#icon");
   {  precipitationElement.innerHTML = "none"; };
   if (response.data.weather[0].id > 599 && response.data.weather[0].id < 700)
   {precipitationElement.innerHTML = "snow";};      
-console.log(response.data.weather[0].id);
   
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -53,7 +52,34 @@ console.log(response.data.weather[0].id);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
 };
+
+function search(city){
 let apiKey=`51781a03b7d634472c63cc196a9cc04b`;
-let city=`New York`
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemp);
+axios.get(apiUrl).then(displayTemp);   
+}
+function searchEngine(event){
+    event.preventDefault();
+    let cityInput = document.querySelector("#search-input");
+    console.log(cityInput.value);
+    search(cityInput.value);
+   }
+
+function changeUnits(event){
+event.preventDefault();
+let temperatureElement = document.querySelector("#temp");
+temperatureElement.innerHTML = Math.round(celTemp * 9 / 5 + 32);
+}
+function changeUnitsBack(event){
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temp");
+    temperatureElement.innerHTML = Math.round(celTemp);
+    }
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchEngine);
+ 
+let fahrenheitTemp = document.querySelector("#fahr-temp");
+fahrenheitTemp.addEventListener("click",changeUnits);
+let celsiusTemp = document.querySelector("#cel-temp");
+celsiusTemp.addEventListener("click",changeUnitsBack);
+search("New York");

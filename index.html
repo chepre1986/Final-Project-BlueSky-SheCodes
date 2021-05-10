@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueSky</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css">  
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-<body>
+<body>  
     <div class="container">
    <div class="weather-app" >
    
 
-    <span id="city">New York</span>
+    <span id="city"></span>
     <ul> 
-        <li id="date">Friday 06:00</li>
-        <li id="description">Clear Sky</li>
+        <li id="date"></li>
+        <li id="description"></li>
     </ul>
     
      <div class="row">
@@ -30,6 +30,28 @@
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
+        </div>
+        <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="City.."
+                  class="form-control"
+                  id="search-input"
+                  autocomplete="off"
+                                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-primary"
+                />
+              </div>
+            </div>
+          </form>
+            </div>
         </div>
      </div>  
 </div>

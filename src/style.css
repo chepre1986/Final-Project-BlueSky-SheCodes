@@ -1,7 +1,5 @@
-body {
-    color: blue;
-};
-ul {
+
+li ul {
     list-style: none;
 };
 .weather-app {
@@ -15,5 +13,5 @@ ul {
     };
 .active {
     text-decoration: none;
-    color: blue;
+    color: black;
 }    
