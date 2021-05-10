@@ -1,8 +1,16 @@
 body {
     color: blue;
 };
-.wether-app {
-    max-width:600px;
-    margin: 10px auto;
+.weather-app {
+    border: 3px;
+    border-radius: 10px;
+    border-color: blue;
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 600px;
     padding: 20px; 
-    }
+    };
+.active {
+    text-decoration: none;
+    color: blue;
+}    
