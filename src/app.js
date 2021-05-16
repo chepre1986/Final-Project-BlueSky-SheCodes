@@ -121,5 +121,5 @@ function searchEngine(event){
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchEngine);
  
-search("New York");
+search("Bydgoszcz");
 

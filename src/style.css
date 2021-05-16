@@ -1,3 +1,5 @@
+
+    
 ul {
     list-style-type: none;
     margin: 0;
@@ -6,7 +8,7 @@ ul {
 
 a {
     text-decoration-line: none;
-    color:rgb(240, 85, 13);
+    color:rgb(255, 255, 255);
 }
 .container {
 max-width: 600px ;
@@ -16,7 +18,12 @@ color:black;
 
 .weather-app {
      margin: 30px ;
+     padding: 20px;
+    
+    border-radius: 25px;
+    background-image: linear-gradient(#ffffff, #f0550d);
 }
+
 .weather-forecast {
     text-align: center;
     font-size: 16px ;
@@ -48,11 +55,21 @@ color:black;
 .my-source {
       padding-left: 60 px;
     }
-#city {
+#city, #temp {
+
     font-size: 36px ;
     font-weight: bolder;
 }
+#cel-temp {
+    font-weight: bolder;
+    position: relative;
+    top: -5px;
+}
+#temp {
 
+    position: relative;
+    top: 10px;
+}
 #date #description {
     font-size: 24px ;
 }
