@@ -58,3 +58,6 @@ color:black;
 #search-form {
     margin: 0 auto;
 }
+#description{
+    text-transform: capitalize;
+}
