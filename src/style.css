@@ -1,17 +1,52 @@
-
-li ul {
-    list-style: none;
+.container {
+max-width: 600px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
 };
 .weather-app {
     border: 3px;
     border-radius: 10px;
-    border-color: blue;
-    margin: 0 auto;
+    border-color: rgb(240, 85, 13);
+    
     margin-top: 30px;
-    max-width: 600px;
-    padding: 20px; 
+   
     };
-.active {
-    text-decoration: none;
-    color: black;
+
 }    
+.weather-forecast {
+    text-align: center;
+    font-size: 16px;
+    margin: 16px;
+    padding: 0;
+}
+.forecast-min-temp{
+    opacity: 0.6;
+}
+.my-source {
+      max-width: 600px;
+    
+}
+.btn-primary {
+    background-color: rgb(240, 85, 13);
+    color: rgba(0, 0, 0, 0.6);
+    border-color: rgba(0, 0, 0, 0.6);
+}
+.btn-primary:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(240, 85, 13);
+    border-color: rgba(0, 0, 0, 0.6);
+}
+.form-control {
+    border-color: rgba(0, 0, 0, 0.6);
+}
+a {
+    text-decoration-line: none;
+    color:rgb(240, 85, 13);
+}
+.active {
+    text-decoration-line: none;
+    color: black;
+}

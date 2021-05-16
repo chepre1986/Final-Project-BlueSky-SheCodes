@@ -69,11 +69,15 @@ function changeUnits(event){
 event.preventDefault();
 let temperatureElement = document.querySelector("#temp");
 temperatureElement.innerHTML = Math.round(celTemp * 9 / 5 + 32);
+celsiusTemp.classList.remove("active");
+fahrenheitTemp.classList.add("active");
 }
 function changeUnitsBack(event){
     event.preventDefault();
     let temperatureElement = document.querySelector("#temp");
     temperatureElement.innerHTML = Math.round(celTemp);
+    fahrenheitTemp.classList.remove("active");
+    celsiusTemp.classList.add("active");
     }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchEngine);
